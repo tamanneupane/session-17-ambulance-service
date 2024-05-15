@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  ambulance-service:
+    build:
+      context: ./docker
+    container_name: ambulance-service
+    networks:
+      - vastika-training
+    restart: always
+    ports:
+      - '8085:8085'
+
+  postgres:
+    image: postgres
+    container_name: postgres-database
+    networks:
+      - vastika-training
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: password
+    ports:
+      - '5433:5432'
+
+networks:
+  vastika-training:
+      external: true

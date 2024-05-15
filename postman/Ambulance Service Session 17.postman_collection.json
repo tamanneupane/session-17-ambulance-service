@@ -1,0 +1,86 @@
+{
+	"info": {
+		"_postman_id": "0d5059b8-2d48-458e-9601-baecc2f5c89c",
+		"name": "Ambulance Service Session 17",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "369370"
+	},
+	"item": [
+		{
+			"name": "Create Ambulance",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"vehicleNumber\": \"12346\",\n    \"latitude\": 27.7657,\n    \"longitude\": 85.3456,\n    \"hospitalName\" : \"Teaching Hospita\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/ambulance",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"ambulance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Ambulance List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/v1/ambulance",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"ambulance"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "localhost:8085",
+			"type": "string"
+		}
+	]
+}
